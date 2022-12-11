@@ -1,0 +1,6 @@
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net40\assignment4.csproj.AssemblyReference.cache
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net40\assignment4.csproj.SuggestedBindingRedirects.cache
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net40\assignment4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net40\assignment4.AssemblyInfoInputs.cache
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net40\assignment4.AssemblyInfo.cs
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net40\assignment4.csproj.CoreCompileInputs.cache
