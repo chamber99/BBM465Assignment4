@@ -4,6 +4,8 @@
 		<TargetFramework>net45</TargetFramework>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="Emgu.CV.runtime.windows" Version="4.5.1.4349" />
+		<PackageReference Include="EmguCV" Version="3.1.0.1" />
 		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net45" Version="1.0.2">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

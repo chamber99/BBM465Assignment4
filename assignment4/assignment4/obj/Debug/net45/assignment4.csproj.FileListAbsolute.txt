@@ -9,3 +9,12 @@ C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\ob
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.csproj.CoreCompileInputs.cache
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.exe
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.pdb
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Emgu.CV.UI.GL.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Emgu.CV.UI.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Emgu.CV.World.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\OpenTK.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\OpenTK.GLControl.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\ZedGraph.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\cvextern.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\opencv_videoio_ffmpeg451.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.csproj.CopyComplete
