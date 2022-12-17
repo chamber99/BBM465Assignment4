@@ -3,5 +3,6 @@
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)microsoft.netframework.referenceassemblies.net45\1.0.2\build\Microsoft.NETFramework.ReferenceAssemblies.net45.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.netframework.referenceassemblies.net45\1.0.2\build\Microsoft.NETFramework.ReferenceAssemblies.net45.targets')" />
     <Import Project="$(NuGetPackageRoot)emgucv\3.1.0.1\build\EmguCV.targets" Condition="Exists('$(NuGetPackageRoot)emgucv\3.1.0.1\build\EmguCV.targets')" />
+    <Import Project="$(NuGetPackageRoot)accord\3.8.0\build\Accord.targets" Condition="Exists('$(NuGetPackageRoot)accord\3.8.0\build\Accord.targets')" />
   </ImportGroup>
 </Project>

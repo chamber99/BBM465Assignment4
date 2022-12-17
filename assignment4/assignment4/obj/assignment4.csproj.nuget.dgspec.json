@@ -40,6 +40,10 @@
         "net45": {
           "targetAlias": "net45",
           "dependencies": {
+            "Accord.MachineLearning": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
             "Emgu.CV.runtime.windows": {
               "target": "Package",
               "version": "[4.5.1.4349, )"
@@ -55,7 +59,7 @@
               "version": "[1.0.2, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

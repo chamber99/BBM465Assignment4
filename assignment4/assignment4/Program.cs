@@ -8,7 +8,8 @@ public class Assignment4{
         String training = args[0];
         String validation = args[1];
 
-
+        Console.WriteLine(training + " " + validation);
+        
 
 
         Console.WriteLine("hehe");

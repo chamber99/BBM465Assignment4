@@ -11,4 +11,15 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="BTDH">
+	    <HintPath>..\BTDH.dll</HintPath>
+	  </Reference>
+	  <Reference Include="CEDD">
+	    <HintPath>..\CEDD.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FCTH">
+	    <HintPath>..\FCTH.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
 </Project>

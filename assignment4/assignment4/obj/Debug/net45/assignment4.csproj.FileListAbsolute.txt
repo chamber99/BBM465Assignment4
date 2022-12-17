@@ -18,3 +18,6 @@ C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bi
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\cvextern.dll
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\opencv_videoio_ffmpeg451.dll
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.csproj.CopyComplete
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\BTDH.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\CEDD.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\FCTH.dll
