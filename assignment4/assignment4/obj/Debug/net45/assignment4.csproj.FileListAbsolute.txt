@@ -21,3 +21,9 @@ C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\ob
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\BTDH.dll
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\CEDD.dll
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\FCTH.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.dll.config
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.MachineLearning.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Math.Core.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Math.dll
+C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Statistics.dll

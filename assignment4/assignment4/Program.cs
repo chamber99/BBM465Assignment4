@@ -20,6 +20,11 @@ public class Assignment4{
 
         ImageOperations image = new ImageOperations();
 
-        
+
+        // searches the current directory and sub directory
+        int fCount = Directory.GetFiles("C:\\Users\\berka\\Desktop\\Assignment 4\\phishIRIS_DL_Dataset", "*", SearchOption.AllDirectories).Length;
+        Console.WriteLine("Count :" + fCount);
+
+
     }
 }

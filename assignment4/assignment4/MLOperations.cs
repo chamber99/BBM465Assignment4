@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Emgu.CV;
+using Emgu.CV.ML;
 
 namespace assignment4
 {
@@ -15,12 +16,13 @@ namespace assignment4
         }
 
         public void useLSVM() { 
-            
+           
         }
 
-        public void useRandomForest() { 
-        
-        
+        public void useRandomForest() {
+            Emgu.CV.ML.RTrees rTrees = new Emgu.CV.ML.RTrees();
+            //rTrees.Train();
+
         }
 
 

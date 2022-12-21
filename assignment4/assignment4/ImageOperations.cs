@@ -9,6 +9,7 @@ using Emgu.CV;
 using FCTH_Descriptor;
 using CEDD_Descriptor;
 using Emgu.CV.XFeatures2D;
+using System.IO;
 
 namespace assignment4
 
@@ -19,8 +20,8 @@ namespace assignment4
         double[] CEDDTable = new double[144];
         double[] FCTHTable = new double[192];
 
-
-
+        List<Image> training = new List<Image> { };
+        List<Image> validation = new List<Image> { };
 
         public ImageOperations() { 
               
@@ -28,9 +29,22 @@ namespace assignment4
 
         }
 
+        public void prepareImages(String training) {
+
+            // searches the current directory and sub directory
+            //int fCount = Directory.GetFiles(path, "*", SearchOption.AllDirectories).Length;
+            // searches the current directory
+            //int fCount = Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly).Length;
+
+
+        }
+
+        
+
+
         public void useHOG(Bitmap imageData) {
             HOGDescriptor getHOG = new HOGDescriptor();
-
+            //getHOG.Compute();
         
         }
 
