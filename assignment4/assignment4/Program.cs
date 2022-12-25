@@ -9,6 +9,9 @@ public class Assignment4{
         String validation = args[1];
 
         Console.WriteLine(training + " " + validation);
+        MLOperations ml = new MLOperations();
+        ImageOperations img = new ImageOperations();
+
         
 
 
