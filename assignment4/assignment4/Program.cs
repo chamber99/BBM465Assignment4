@@ -26,6 +26,12 @@ public class Assignment4{
 
         // searches the current directory and sub directory
         int fCount = Directory.GetFiles("C:\\Users\\berka\\Desktop\\Assignment 4\\phishIRIS_DL_Dataset", "*", SearchOption.AllDirectories).Length;
+        string[] allfiles = Directory.GetFiles("C:\\Users\\berka\\Desktop\\Assignment 4\\phishIRIS_DL_Dataset", "*.*", SearchOption.AllDirectories);
+
+        for (int i = 0; i < allfiles.Length; i++){
+            Console.WriteLine(allfiles[i]);
+        }
+
         Console.WriteLine("Count :" + fCount);
 
 
