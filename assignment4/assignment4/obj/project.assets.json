@@ -130,12 +130,6 @@
           "build/EmguCV.targets": {}
         }
       },
-      "Microsoft.NETFramework.ReferenceAssemblies/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies.net45": "1.0.2"
-        }
-      },
       "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.2": {
         "type": "package",
         "build": {
@@ -305,12 +299,6 @@
         "build": {
           "build/EmguCV.props": {},
           "build/EmguCV.targets": {}
-        }
-      },
-      "Microsoft.NETFramework.ReferenceAssemblies/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETFramework.ReferenceAssemblies.net45": "1.0.2"
         }
       },
       "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.2": {
@@ -565,17 +553,6 @@
         "lib/net30/Emgu.CV.UI.xml",
         "lib/net30/Emgu.CV.World.dll",
         "lib/net30/Emgu.CV.World.xml"
-      ]
-    },
-    "Microsoft.NETFramework.ReferenceAssemblies/1.0.2": {
-      "sha512": "5/cSEVld+px/CuRrbohO/djfg6++eR6zGpy88MgqloXvkj//WXWpFZyu/OpkXPN0u5m+dN/EVwLNYFUxD4h2+A==",
-      "type": "package",
-      "path": "microsoft.netframework.referenceassemblies/1.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
-        "microsoft.netframework.referenceassemblies.nuspec"
       ]
     },
     "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.2": {
@@ -957,7 +934,6 @@
       "Accord.MachineLearning >= 3.8.0",
       "Emgu.CV.runtime.windows >= 4.5.1.4349",
       "EmguCV >= 3.1.0.1",
-      "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.2",
       "Microsoft.NETFramework.ReferenceAssemblies.net45 >= 1.0.2"
     ]
   },
@@ -1012,12 +988,6 @@
             "target": "Package",
             "version": "[3.1.0.1, )"
           },
-          "Microsoft.NETFramework.ReferenceAssemblies": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[1.0.2, )",
-            "autoReferenced": true
-          },
           "Microsoft.NETFramework.ReferenceAssemblies.net45": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -1025,7 +995,7 @@
             "version": "[1.0.2, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

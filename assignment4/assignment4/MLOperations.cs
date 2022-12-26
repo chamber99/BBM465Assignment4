@@ -15,6 +15,12 @@ namespace assignment4
 
         }
 
+        public void useKNN() { 
+            Emgu.CV.ML.KNearest knn = new KNearest();
+            
+        
+        }
+
         public void useLSVM() { 
            Emgu.CV.ML.SVM svm = new SVM();
             //svm.Train();

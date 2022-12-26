@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y5Aqu8TVxs8LfFDUmBi9HyUMWRELDWir/ru1WzY8lO7KQRvfEShSZ0mNzMXXuSP4WONFWWpIjp1xLDFeRnX+PA==",
+  "dgSpecHash": "Ntb9QehwMAlblAbb5kaL8zZifF6mAI2Cy64U03b/UzWqP/Yvkt4nD2zEE78844ZvR1HxbC8D9rjyorOYylPtMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,6 @@
     "C:\\Users\\berka\\.nuget\\packages\\accord.statistics\\3.8.0\\accord.statistics.3.8.0.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\emgu.cv.runtime.windows\\4.5.1.4349\\emgu.cv.runtime.windows.4.5.1.4349.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\emgucv\\3.1.0.1\\emgucv.3.1.0.1.nupkg.sha512",
-    "C:\\Users\\berka\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net45\\1.0.2\\microsoft.netframework.referenceassemblies.net45.1.0.2.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\opentk\\1.1.2225\\opentk.1.1.2225.nupkg.sha512",
     "C:\\Users\\berka\\.nuget\\packages\\opentk.glcontrol\\1.1.2225\\opentk.glcontrol.1.1.2225.nupkg.sha512",
