@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/assignment4/assignment4/bin/Debug/net45/assignment4.exe",
-            "args": [],
+            "args": ["train","val"],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "console": "internalConsole"
