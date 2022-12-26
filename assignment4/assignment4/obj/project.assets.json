@@ -130,7 +130,7 @@
           "build/EmguCV.targets": {}
         }
       },
-      "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.2": {
+      "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.3": {
         "type": "package",
         "build": {
           "build/Microsoft.NETFramework.ReferenceAssemblies.net45.targets": {}
@@ -301,7 +301,7 @@
           "build/EmguCV.targets": {}
         }
       },
-      "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.2": {
+      "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.3": {
         "type": "package",
         "build": {
           "build/Microsoft.NETFramework.ReferenceAssemblies.net45.targets": {}
@@ -555,10 +555,10 @@
         "lib/net30/Emgu.CV.World.xml"
       ]
     },
-    "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.2": {
-      "sha512": "Nm14pRmqB+4u2JEMdtngnbDcJidTmswMxOJ992TpTwiwcUTERxLlHwwSh0HiUoRjS0TO0sozsiB0h6FHjCUdEA==",
+    "Microsoft.NETFramework.ReferenceAssemblies.net45/1.0.3": {
+      "sha512": "dcSLNuUX2rfZejsyta2EWZ1W5U6ucbFt697lRg1qiTlTM5ZlYv4uAvuxE6ROy6xLWWhLhOaReCDxkhxcajRYtQ==",
       "type": "package",
-      "path": "microsoft.netframework.referenceassemblies.net45/1.0.2",
+      "path": "microsoft.netframework.referenceassemblies.net45/1.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -869,7 +869,7 @@
         "build/.NETFramework/v4.5/sysglobl.dll",
         "build/.NETFramework/v4.5/sysglobl.xml",
         "build/Microsoft.NETFramework.ReferenceAssemblies.net45.targets",
-        "microsoft.netframework.referenceassemblies.net45.1.0.2.nupkg.sha512",
+        "microsoft.netframework.referenceassemblies.net45.1.0.3.nupkg.sha512",
         "microsoft.netframework.referenceassemblies.net45.nuspec"
       ]
     },
@@ -934,7 +934,7 @@
       "Accord.MachineLearning >= 3.8.0",
       "Emgu.CV.runtime.windows >= 4.5.1.4349",
       "EmguCV >= 3.1.0.1",
-      "Microsoft.NETFramework.ReferenceAssemblies.net45 >= 1.0.2"
+      "Microsoft.NETFramework.ReferenceAssemblies.net45 >= 1.0.3"
     ]
   },
   "packageFolders": {
@@ -992,7 +992,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[1.0.2, )"
+            "version": "[1.0.3, )"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"

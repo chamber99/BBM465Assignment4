@@ -69,6 +69,7 @@ namespace assignment4
 
         public void useSIFT(Bitmap imageData) { 
             SIFT getSIFT = new SIFT();
+            
             //getSIFT.DetectAndCompute();   
         }
 
