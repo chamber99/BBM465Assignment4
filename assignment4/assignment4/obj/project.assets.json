@@ -75,27 +75,6 @@
           }
         }
       },
-      "Emgu.CV.runtime.windows/4.5.1.4349": {
-        "type": "package",
-        "runtimeTargets": {
-          "runtimes/win-x64/native/cvextern.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x64/native/opencv_videoio_ffmpeg451_64.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/cvextern.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          },
-          "runtimes/win-x86/native/opencv_videoio_ffmpeg451.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
-          }
-        }
-      },
       "EmguCV/3.1.0.1": {
         "type": "package",
         "dependencies": {
@@ -258,13 +237,6 @@
           "lib/net45/Accord.Statistics.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Emgu.CV.runtime.windows/4.5.1.4349": {
-        "type": "package",
-        "native": {
-          "runtimes/win-x86/native/cvextern.dll": {},
-          "runtimes/win-x86/native/opencv_videoio_ffmpeg451.dll": {}
         }
       },
       "EmguCV/3.1.0.1": {
@@ -513,23 +485,6 @@
         "lib/netstandard1.4/Accord.Statistics.xml",
         "lib/netstandard2.0/Accord.Statistics.dll",
         "lib/netstandard2.0/Accord.Statistics.xml"
-      ]
-    },
-    "Emgu.CV.runtime.windows/4.5.1.4349": {
-      "sha512": "IOhubaLFZUv9WZgdlCw9jmXODWhr8UWnoJqUkPmKp0q7fK+NmRdiAtR9yKyo4jtOrb5bytmpGQcTJ2weFP3DUg==",
-      "type": "package",
-      "path": "emgu.cv.runtime.windows/4.5.1.4349",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "emgu.cv.runtime.windows.4.5.1.4349.nupkg.sha512",
-        "emgu.cv.runtime.windows.nuspec",
-        "icon.png",
-        "runtimes/win-x64/native/cvextern.dll",
-        "runtimes/win-x64/native/opencv_videoio_ffmpeg451_64.dll",
-        "runtimes/win-x86/native/cvextern.dll",
-        "runtimes/win-x86/native/opencv_videoio_ffmpeg451.dll"
       ]
     },
     "EmguCV/3.1.0.1": {
@@ -932,7 +887,6 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.5": [
       "Accord.MachineLearning >= 3.8.0",
-      "Emgu.CV.runtime.windows >= 4.5.1.4349",
       "EmguCV >= 3.1.0.1",
       "Microsoft.NETFramework.ReferenceAssemblies.net45 >= 1.0.3"
     ]
@@ -979,10 +933,6 @@
           "Accord.MachineLearning": {
             "target": "Package",
             "version": "[3.8.0, )"
-          },
-          "Emgu.CV.runtime.windows": {
-            "target": "Package",
-            "version": "[4.5.1.4349, )"
           },
           "EmguCV": {
             "target": "Package",
