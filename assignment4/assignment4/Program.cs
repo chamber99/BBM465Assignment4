@@ -10,7 +10,7 @@ public class Assignment4{
 
         Console.WriteLine(training + " " + validation);
         MLOperations ml = new MLOperations();
-        ImageOperations img = new ImageOperations();
+        ImageOperations img = new ImageOperations("train","validate");
 
         
 
@@ -21,7 +21,7 @@ public class Assignment4{
         Console.WriteLine("testing");
         
 
-        ImageOperations image = new ImageOperations();
+        
 
 
         // searches the current directory and sub directory

@@ -20,11 +20,16 @@ namespace assignment4
         double[] CEDDTable = new double[144];
         double[] FCTHTable = new double[192];
 
+        string trainPath;
+        string validatePath;
+
         List<Image> training = new List<Image> { };
+        
         List<Image> validation = new List<Image> { };
 
-        public ImageOperations() { 
-              
+        public ImageOperations(String train, String validate) {
+            trainPath = train;
+            validatePath = validate;
 
 
         }
