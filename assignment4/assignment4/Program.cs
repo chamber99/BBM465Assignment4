@@ -88,10 +88,11 @@ public class Assignment4{
 
 
         }
+        StringBuilder builder = new StringBuilder();
 
-        foreach(String image in images_training)
+        foreach (String image in images_training)
         {
-            StringBuilder builder = new StringBuilder();
+            
             double[] values = img.useCEDD(new Bitmap(image));
 
             foreach (double value in values)
@@ -104,18 +105,15 @@ public class Assignment4{
 
             builder.Append($" {image.Split('\\')[len-2]}\n");
 
-            String csv = builder.ToString();
-
-            StreamWriter precomputed = new StreamWriter(path + "\\precomputed_CEDD_train.csv");
-
-            precomputed.Write(csv);
-
-            precomputed.Close();
-
-
-
-
         }
+
+        String csv = builder.ToString();
+
+        StreamWriter precomputed = new StreamWriter(path + "\\precomputed_CEDD_train.csv");
+
+        precomputed.Write(csv);
+
+        precomputed.Close();
 
 
 
