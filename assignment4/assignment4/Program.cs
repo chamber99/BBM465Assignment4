@@ -10,6 +10,7 @@ using Emgu.CV.XFeatures2D;
 using OpenTK.Audio.OpenAL;
 using System.Security.Policy;
 using System.Linq;
+using System.Diagnostics;
 
 public class Assignment4
 {
@@ -133,7 +134,7 @@ public class Assignment4
 
 
 
-            Console.WriteLine();
+            
 
             
 
@@ -144,7 +145,9 @@ public class Assignment4
             {
 
                 double[] values_cedd = img.useCEDD(new Bitmap(image));
+
                 double[] values_fcth = img.useFCTH(new Bitmap(image));
+
 
                 foreach (double value in values_cedd)
                 {
@@ -180,6 +183,55 @@ public class Assignment4
 
             precomputed.Close();
             precomputed_fcth.Close();
+
+
+
+            foreach (String image in images_validation)
+            {
+
+                double[] values_cedd = img.useCEDD(new Bitmap(image));
+
+                double[] values_fcth = img.useFCTH(new Bitmap(image));
+
+
+                foreach (double value in values_cedd)
+                {
+                    builder_cedd.Append(value.ToString() + ",");
+                }
+
+                foreach (double value in values_fcth)
+                {
+                    builder_fcth.Append(value.ToString() + ",");
+
+                }
+
+                builder_cedd.Remove(builder_cedd.Length - 1, 1);
+                builder_fcth.Remove(builder_fcth.Length - 1, 1);
+
+                int len = image.Split('\\').Length;
+
+                String val = image.Split('\\')[len - 2];
+
+                builder_cedd.Append($" {val}\n");
+                builder_fcth.Append(" " + val + "\n");
+
+            }
+
+            csv_cedd = builder_cedd.ToString();
+            csv_fcth = builder_fcth.ToString();
+
+            precomputed = new StreamWriter(path + "\\precomputed_CEDD_val.csv");
+            precomputed_fcth = new StreamWriter(path + "\\precomputed_FCTH_val.csv");
+
+            precomputed.Write(csv_cedd);
+            precomputed_fcth.Write(csv_fcth);
+
+            precomputed.Close();
+            precomputed_fcth.Close();
+
+
+
+
         }
 
 
