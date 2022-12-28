@@ -2,7 +2,7 @@
   "profiles": {
     "assignment4": {
       "commandName": "Project",
-      "commandLineArgs": "testing procedure"
+      "commandLineArgs": "-dataset ..\\..\\phishIRIS_DL_Dataset -mode train"
     }
   }
 }
