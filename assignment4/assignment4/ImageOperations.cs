@@ -50,14 +50,12 @@ namespace assignment4
             CEDD_Descriptor.CEDD getCEDD = new CEDD_Descriptor.CEDD();
             double[] table = getCEDD.Apply(imageData);
             return table;
-
-
         }
 
-        public void useFCTH(Bitmap imageData) {
+        public double[] useFCTH(Bitmap imageData) {
             FCTH_Descriptor.FCTH getFCTH = new FCTH_Descriptor.FCTH();
-            FCTHTable = getFCTH.Apply(imageData,2);
-
+            double[] table = getFCTH.Apply(imageData,2);
+            return table;
         }
 
         public void useSIFT(Bitmap imageData) { 

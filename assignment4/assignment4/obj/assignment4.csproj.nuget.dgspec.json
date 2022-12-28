@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj": {}
+    "C:\\Users\\berka\\Desktop\\as4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj": {
+    "C:\\Users\\berka\\Desktop\\as4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
+        "projectUniqueName": "C:\\Users\\berka\\Desktop\\as4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
         "projectName": "assignment4",
-        "projectPath": "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
+        "projectPath": "C:\\Users\\berka\\Desktop\\as4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
         "packagesPath": "C:\\Users\\berka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\obj\\",
+        "outputPath": "C:\\Users\\berka\\Desktop\\as4\\BBM465Assignment4\\assignment4\\assignment4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\berka\\AppData\\Roaming\\NuGet\\NuGet.Config",

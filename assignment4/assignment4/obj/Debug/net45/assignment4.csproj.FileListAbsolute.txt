@@ -25,3 +25,30 @@ C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bi
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Math.Core.dll
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Math.dll
 C:\Users\berka\Desktop\Assignment 4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Statistics.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.dll.config
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\assignment4.exe.config
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\assignment4.exe
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\assignment4.pdb
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.MachineLearning.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Math.Core.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Math.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Accord.Statistics.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Emgu.CV.UI.GL.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Emgu.CV.UI.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\Emgu.CV.World.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\OpenTK.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\OpenTK.GLControl.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\ZedGraph.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\BTDH.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\CEDD.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\bin\Debug\net45\FCTH.dll
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.csproj.AssemblyReference.cache
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.csproj.SuggestedBindingRedirects.cache
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.AssemblyInfoInputs.cache
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.AssemblyInfo.cs
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.csproj.CoreCompileInputs.cache
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.csproj.CopyComplete
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.exe
+C:\Users\berka\Desktop\as4\BBM465Assignment4\assignment4\assignment4\obj\Debug\net45\assignment4.pdb
