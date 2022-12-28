@@ -88,32 +88,50 @@ public class Assignment4{
 
 
         }
-        StringBuilder builder = new StringBuilder();
+
+        StringBuilder builder_cedd = new StringBuilder();
+        StringBuilder builder_fcth = new StringBuilder();
 
         foreach (String image in images_training)
         {
             
-            double[] values = img.useCEDD(new Bitmap(image));
+            double[] values_cedd = img.useCEDD(new Bitmap(image));
+            double[] values_fcth = img.useFCTH(new Bitmap(image));
 
-            foreach (double value in values)
+            foreach (double value in values_cedd)
             {
-                builder.Append(value.ToString() + ",");
+                builder_cedd.Append(value.ToString() + ",");
             }
 
-            builder.Remove(builder.Length - 1, 1);
+            foreach (double value in values_fcth)
+            {
+                builder_fcth.Append(value.ToString() + ",");
+
+            }
+
+            builder_cedd.Remove(builder_cedd.Length - 1, 1);
+            builder_fcth.Remove(builder_fcth.Length - 1, 1);
+
             int len = image.Split('\\').Length;
 
-            builder.Append($" {image.Split('\\')[len-2]}\n");
+            String val = image.Split('\\')[len - 2];
+
+            builder_cedd.Append($" {val}\n");
+            builder_fcth.Append(" "+ val + "\n");
 
         }
 
-        String csv = builder.ToString();
+        String csv = builder_cedd.ToString();
+        String csv_fcth = builder_fcth.ToString();
 
         StreamWriter precomputed = new StreamWriter(path + "\\precomputed_CEDD_train.csv");
+        StreamWriter precomputed_fcth = new StreamWriter(path + "\\precomputed_FCTH_train.csv");
 
         precomputed.Write(csv);
+        precomputed_fcth.Write(csv_fcth);
 
         precomputed.Close();
+        precomputed_fcth.Close();
 
 
 
