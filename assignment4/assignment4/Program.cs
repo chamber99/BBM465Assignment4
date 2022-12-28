@@ -108,7 +108,7 @@ public class Assignment4{
 
             StreamWriter precomputed = new StreamWriter(path + "\\precomputed_CEDD_train.csv");
 
-            precomputed.Write(path + "\\precomputed_CEDD_train.csv", csv);
+            precomputed.Write(csv);
 
             precomputed.Close();
 
