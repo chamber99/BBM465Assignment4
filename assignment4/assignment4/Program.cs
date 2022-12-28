@@ -1,6 +1,7 @@
 ﻿using assignment4;
 using System;
 using System.IO;
+using System.Drawing;
 
 public class Assignment4{
     public static void Main(String[] args)
@@ -30,7 +31,45 @@ public class Assignment4{
 
         for (int i = 0; i < allfiles.Length; i++){
             Console.WriteLine(allfiles[i]);
+            img.useCEDD(new Bitmap(allfiles[i]));
+            img.useFCTH(new Bitmap(allfiles[i]));
+            break;
         }
+        
+        for(int i = 0; i<img.CEDDTable.Length; i++)
+        {
+            Console.Write(img.CEDDTable[i] + " ");
+            
+        }
+        Console.WriteLine();
+
+        for (int i = 0; i < img.FCTHTable.Length; i++)
+        {
+            Console.Write(img.FCTHTable[i] + " ");
+
+        }
+        Console.WriteLine();
+
+        Console.WriteLine("Garavel");
+
+        img.useCEDD(new Bitmap("C:\\Users\\berka\\Desktop\\garavel.jpeg"));
+        for (int i = 0; i < img.CEDDTable.Length; i++)
+        {
+            Console.Write(img.CEDDTable[i] + " ");
+
+        }
+        Console.WriteLine();
+
+        img.useFCTH(new Bitmap("C:\\Users\\berka\\Desktop\\garavel.jpeg"));
+        for (int i = 0; i < img.FCTHTable.Length; i++)
+        {
+            Console.Write(img.FCTHTable[i] + " ");
+
+        }
+
+
+
+
 
         Console.WriteLine("Count :" + fCount);
 

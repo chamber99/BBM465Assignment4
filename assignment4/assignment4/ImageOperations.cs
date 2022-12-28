@@ -17,19 +17,24 @@ namespace assignment4
 {
     internal class ImageOperations
     {   
-        double[] CEDDTable = new double[144];
-        double[] FCTHTable = new double[192];
+        public double[] CEDDTable = new double[144];
+        public double[] FCTHTable = new double[192];
+
+        List<GlobalImage> GlobalImages = new List<GlobalImage>();
+
+
+
 
         string trainPath;
         string validatePath;
 
-        List<Image> training = new List<Image> { };
-        
+        List<Image> training = new List<Image> { };        
         List<Image> validation = new List<Image> { };
 
         public ImageOperations(String train, String validate) {
             trainPath = train;
             validatePath = validate;
+
 
 
         }
@@ -72,6 +77,11 @@ namespace assignment4
             
             //getSIFT.DetectAndCompute();   
         }
+
+        public void EmguCEDD() { 
+            
+        }
+
 
         public void useSURF(Bitmap imageData)
         {
