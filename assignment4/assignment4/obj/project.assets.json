@@ -733,11 +733,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\berka\\Desktop\\as4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
+      "projectUniqueName": "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
       "projectName": "assignment4",
-      "projectPath": "C:\\Users\\berka\\Desktop\\as4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
+      "projectPath": "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\assignment4.csproj",
       "packagesPath": "C:\\Users\\berka\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\berka\\Desktop\\as4\\BBM465Assignment4\\assignment4\\assignment4\\obj\\",
+      "outputPath": "C:\\Users\\berka\\Desktop\\Assignment 4\\BBM465Assignment4\\assignment4\\assignment4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\berka\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -781,7 +781,7 @@
             "version": "[1.0.3, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
