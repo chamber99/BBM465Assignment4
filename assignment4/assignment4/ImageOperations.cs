@@ -22,21 +22,8 @@ namespace assignment4
 
         List<GlobalImage> GlobalImages = new List<GlobalImage>();
 
-
-
-
-        string trainPath;
-        string validatePath;
-
-        List<Image> training = new List<Image> { };        
-        List<Image> validation = new List<Image> { };
-
         public ImageOperations(String train, String validate) {
-            trainPath = train;
-            validatePath = validate;
-
-
-
+            
         }
 
         public void prepareImages(String training) {
@@ -59,9 +46,10 @@ namespace assignment4
         }
 
 
-        public void useCEDD(Bitmap imageData) {
+        public double[] useCEDD(Bitmap imageData) {
             CEDD_Descriptor.CEDD getCEDD = new CEDD_Descriptor.CEDD();
-            CEDDTable = getCEDD.Apply(imageData);
+            double[] table = getCEDD.Apply(imageData);
+            return table;
 
 
         }

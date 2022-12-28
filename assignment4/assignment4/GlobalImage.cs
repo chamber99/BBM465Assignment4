@@ -13,10 +13,10 @@ namespace assignment4
         public String name;
         public String className;
 
-        public GlobalImage() { 
-            
-        
-        
+        public GlobalImage(Bitmap bitmap, String name, String classname) {
+            bitmap = this.bitmap;
+            name = this.name;
+            classname = this.className;
         }
 
 

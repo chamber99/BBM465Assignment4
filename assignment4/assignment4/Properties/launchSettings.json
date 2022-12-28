@@ -2,7 +2,7 @@
   "profiles": {
     "assignment4": {
       "commandName": "Project",
-      "commandLineArgs": "-dataset ..\\..\\phishIRIS_DL_Dataset -mode train"
+      "commandLineArgs": "-dataset C:\\Users\\berka\\Desktop\\Assignment 4\\phishIRIS_DL_Dataset -mode precompute"
     }
   }
 }
