@@ -10,6 +10,7 @@ using FCTH_Descriptor;
 using CEDD_Descriptor;
 using Emgu.CV.XFeatures2D;
 using System.IO;
+using Accord.Imaging;
 
 namespace assignment4
 
@@ -22,7 +23,7 @@ namespace assignment4
 
         List<GlobalImage> GlobalImages = new List<GlobalImage>();
 
-        public ImageOperations(String train, String validate) {
+        public ImageOperations() {
             
         }
 
