@@ -12,6 +12,7 @@ using System.Security.Policy;
 using System.Linq;
 using System.Diagnostics;
 using Accord.Imaging;
+using Accord.Vision;
 using static Accord.Imaging.Filters.StereoAnaglyph;
 
 public class Assignment4

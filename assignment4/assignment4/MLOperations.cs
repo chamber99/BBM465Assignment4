@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Emgu.CV;
 using Emgu.CV.ML;
+using Accord.MachineLearning.DecisionTrees;
+using Accord.Math.Optimization.Losses;
+using Accord.MachineLearning;
+using Accord.MachineLearning.VectorMachines;
 
 namespace assignment4
 {
@@ -15,22 +19,27 @@ namespace assignment4
 
         }
 
-        public void useKNN() { 
-            Emgu.CV.ML.KNearest knn = new KNearest();
+        public void useKNN() {
+            Accord.MachineLearning.KNearestNeighbors knn = new Accord.MachineLearning.KNearestNeighbors();
+            //knn.Learn();
+
+        }
+
+        public void useLSVM(int input) {
+            SupportVectorMachine svm = new SupportVectorMachine(input);
             
-        
         }
 
-        public void useLSVM() { 
-           Emgu.CV.ML.SVM svm = new SVM();
-            //svm.Train();
-            //svm.Predict();
-        }
+        public void useRandomForest(double[][] learn, int[] classlabels, double[][] validate) {
+            RandomForestLearning forestLearning = new RandomForestLearning();
+            forestLearning.NumberOfTrees= 64;
 
-        public void useRandomForest() {
-            Emgu.CV.ML.RTrees rTrees = new Emgu.CV.ML.RTrees();
-            //rTrees.Train();
-            //rTrees.Predict();
+            RandomForest forest = forestLearning.Learn(learn, classlabels);
+            int[] prediction = forest.Decide(validate);
+            double error = new ZeroOneLoss(classlabels).Loss(prediction);
+
+            
+
 
         }
 
