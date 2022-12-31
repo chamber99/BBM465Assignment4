@@ -14,12 +14,21 @@ using System.Diagnostics;
 using Accord.Imaging;
 using Accord.Vision;
 using static Accord.Imaging.Filters.StereoAnaglyph;
+using Accord.Math;
+using Emgu.CV;
+using Accord.MachineLearning.VectorMachines.Learning;
+using Accord.Statistics.Kernels;
+using Accord.Math.Optimization.Losses;
+using Accord.Statistics.Analysis;
+using OpenTK.Graphics.ES20;
+using Emgu.CV.Structure;
 
 public class Assignment4
 {
     public static void Main(String[] args)
     {
-        run(args);
+        //run(args);
+        readCSVFile("../../../precomputed/precomputed_SURF_train.csv", "../../../precomputed/precomputed_SURF_val.csv");
     }
 
     public static void run(String[] arguments)
@@ -220,14 +229,110 @@ public class Assignment4
 
     }
 
-
-
     public static void createCSV(String path,String content)
     {
         // Creating new csv files or overriding the content of existed ones using StreamWriter.  
         StreamWriter csvCreator = new StreamWriter(path);
         csvCreator.Write(content);
         csvCreator.Close();
+    }
+
+    public static void readCSVFile(String pathTrain,String pathVal)
+    {
+        assignment4.Constants constants = new assignment4.Constants();
+        string[] lines = System.IO.File.ReadAllLines(pathTrain);
+        double[][] features = new double[lines.Length][];
+        int[] classes = new int[lines.Length];
+        int index = 0;
+        foreach (string line in lines)
+        {   
+            // Splitting line by whitespace
+            string[] splitLine = line.Split(null);
+            double[] doubles = Array.ConvertAll(splitLine[0].Split(','), new Converter<string, double>(Double.Parse));
+            features[index] = doubles;
+            classes[index] = constants.getClasses()[splitLine[1]];
+            index++;
+        }
+        // Create a one-vs-one multi-class SVM learning algorithm 
+        var teacher = new MulticlassSupportVectorLearning<Linear>()
+        {
+            // using LIBLINEAR's L2-loss SVC dual for each SVM
+            Learner = (p) => new LinearDualCoordinateDescent()
+            {
+                Loss = Loss.L2
+            }
+        };
+
+        // Learn a machine
+        var machine = teacher.Learn(features,classes);
+        index = 0;
+        lines = System.IO.File.ReadAllLines(pathVal);
+        features = new double[lines.Length][];
+        classes = new int[lines.Length];    
+        foreach (string line in lines)
+        {
+            // Splitting line by whitespace
+            string[] splitLine = line.Split(null);
+            double[] doubles = Array.ConvertAll(splitLine[0].Split(','), new Converter<string, double>(Double.Parse));
+            features[index] = doubles;
+            classes[index] = constants.getClasses()[splitLine[1]];
+            index++;
+        }
+        index = 0;
+        // Obtain class predictions for each sample
+        int[] predictedM = machine.Decide(features);
+
+        foreach(int i in predictedM) {
+            Console.WriteLine("predicted {0} + normal {1}", i, classes[index++]);
+        }
+
+        var cm = new GeneralConfusionMatrix(classes: 15, expected: classes, predicted: predictedM);
+
+        int[,] matrix = cm.Matrix;
+        /*double truePositives = 0;
+        double falseNegatives = 0;
+
+        for (int i = 0; i < 15; i++)
+        {
+            for (int j = 0; j < 15; j++)
+            {
+                if(i == j)
+                {
+                    truePositives += Convert.ToDouble(matrix[i, j]);
+                }
+                else
+                {
+                    falseNegatives += Convert.ToDouble(matrix[i, j]);
+
+                }
+            }
+
+        }
+        Console.WriteLine("TPR : {0}",truePositives/(truePositives+falseNegatives));
+        Console.WriteLine("FPR : {0}", truePositives / (truePositives + falseNegatives));
+        Console.WriteLine("F1 : {0}", truePositives / (truePositives + falseNegatives));*/
+
+        // Micro approach was used Berkayım işte burada sıçtık ..... 
+        ConfusionMatrix[] allMatrices = cm.PerClassMatrices;
+        double totalTruePositives = 0;
+        double totalFalsePositives = 0 ;
+        double totalFalseNegatives = 0;
+        double totalTrueNegatives = 0;
+
+        foreach(ConfusionMatrix confusionMatrix in allMatrices)
+        {
+
+            totalTruePositives += confusionMatrix.ActualPositives;
+            totalTrueNegatives += confusionMatrix.ActualNegatives;
+            totalFalsePositives += confusionMatrix.FalsePositives;
+            totalFalseNegatives += confusionMatrix.FalseNegatives;
+        }
+
+        Console.WriteLine("TPR {0}",totalTruePositives/(totalTruePositives+totalFalseNegatives));
+        Console.WriteLine("FPR {0}", totalFalsePositives / (totalFalsePositives + totalTrueNegatives));
+        Console.WriteLine("F1 {0}", (2 * totalTruePositives) / (2 * totalTruePositives + totalFalsePositives + totalFalseNegatives));
+
+
     }
 
     public static StringBuilder extractGlobalFeatures(String algorithm,List<String> images)
