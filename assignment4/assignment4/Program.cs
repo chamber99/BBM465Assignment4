@@ -28,7 +28,29 @@ public class Assignment4
     public static void Main(String[] args)
     {
         //run(args);
-        readCSVFile("../../../precomputed/precomputed_SURF_train.csv", "../../../precomputed/precomputed_SURF_val.csv");
+        //readCSVFile("../../../precomputed/precomputed_SURF_train.csv", "../../../precomputed/precomputed_SURF_val.csv");
+
+        MLOperations ops = new MLOperations();
+        Console.WriteLine("CEDD");
+
+        int[] class_cedd = prepareClassNames("CEDD","train");
+        int[] pred_cedd = prepareClassNames("CEDD","val");
+
+        double[][] cedd_train = prepareMLInputs("CEDD", "train");
+        double[][] cedd_val = prepareMLInputs("CEDD", "val");
+        ops.useRandomForest(cedd_train, class_cedd, cedd_val,pred_cedd);
+
+        Console.WriteLine("FCTH");
+
+        int[] class_FCTH = prepareClassNames("FCTH","train");
+        int[] pred_FCTH = prepareClassNames("FCTH", "val");
+        double[][] FCTH_train = prepareMLInputs("FCTH", "train");
+        double[][] FCTH_val = prepareMLInputs("FCTH", "val");
+        ops.useRandomForest(FCTH_train, class_FCTH, FCTH_val,pred_FCTH);
+
+
+
+
     }
 
     public static void run(String[] arguments)
@@ -119,9 +141,9 @@ public class Assignment4
             }
 
             // Generating precomputed csv files to store features.
-            generatePrecompute("CEDD", images_training, images_validation);
+            //generatePrecompute("CEDD", images_training, images_validation);
             generatePrecompute("FCTH", images_training, images_validation);
-            generatePrecompute("SURF", images_training, images_validation);
+            //generatePrecompute("SURF", images_training, images_validation);
 
 
 
@@ -333,7 +355,146 @@ public class Assignment4
         Console.WriteLine("F1 {0}", (2 * totalTruePositives) / (2 * totalTruePositives + totalFalsePositives + totalFalseNegatives));
 
 
+        MLOperations ops = new MLOperations();
+
+        
+
+
     }
+
+    public static double[][] prepareMLInputs(String algorithm, String mode)
+    {
+        string[] lines = null;
+        double[][] output = null;
+
+        if (algorithm.Equals("CEDD"))
+        {
+            if (mode.Equals("train"))
+            {
+                output = new double[1313][];
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_CEDD_train.csv");
+            }
+            else
+            {
+                output = new double[1539][];
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_CEDD_val.csv");
+            }
+        }
+
+        else if (algorithm.Equals("FCTH"))
+        {
+            if (mode.Equals("train"))
+            {
+                output = new double[1313][];
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_FCTH_train.csv");
+            }
+            else
+            {
+                output = new double[1539][];
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_FCTH_val.csv");
+            }
+        }
+        else if (algorithm.Equals("SURF"))
+        {
+            if (mode.Equals("train"))
+            {
+                output = new double[1313][];
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_SURF_train.csv");
+            }
+            else
+            {
+                output = new double[1539][];
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_SURF_val.csv");
+            }
+        }
+        else
+        {
+            return null;
+        }
+
+        for (int i = 0; i < output.Length; i++)
+        {
+            String line = lines[i];
+            string[] splitLine = line.Split(null);
+            double[] doubles = Array.ConvertAll(splitLine[0].Split(','), new Converter<string, double>(Double.Parse));
+            output[i] = doubles;
+        }
+
+        return output;
+    }
+
+    public static int[] prepareClassNames(String algorithm,String mode)
+    {
+        // we only need the classes from training.
+        int[] classes = mode.Equals("train") ? new int[1313] : new int[1539];
+        string[] lines = null;
+
+        if (algorithm.Equals("CEDD"))
+        {
+            if(mode.Equals("train"))
+            lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_CEDD_train.csv");
+            else
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_CEDD_val.csv");
+        }
+        else if (algorithm.Equals("FCTH"))
+        {
+            if(mode.Equals("train"))
+            lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_FCTH_train.csv");
+            else
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_FCTH_val.csv");
+        }
+        else if (algorithm.Equals("SURF"))
+        {
+            if (mode.Equals("train"))
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_SURF_train.csv");
+            else
+                lines = File.ReadAllLines("..\\..\\..\\precomputed\\precomputed_SURF_val.csv");
+        }
+        else
+        {
+            return null;
+        }
+
+        for (int i = 0; i < classes.Length; i++)
+        {
+            if (lines[i].Contains("adobe"))
+                classes[i] = 0;
+            else if (lines[i].Contains("alibaba"))
+                classes[i] = 1;
+            else if (lines[i].Contains("amazon"))
+                classes[i] = 2;
+            else if (lines[i].Contains("apple"))
+                classes[i] = 3;
+            else if (lines[i].Contains("boa"))
+                classes[i] = 4;
+            else if (lines[i].Contains("chase"))
+                classes[i] = 5;
+            else if (lines[i].Contains("dhl"))
+                classes[i] = 6;
+            else if (lines[i].Contains("dropbox"))
+                classes[i] = 7;
+            else if (lines[i].Contains("facebook"))
+                classes[i] = 8;
+            else if (lines[i].Contains("linkedin"))
+                classes[i] = 9;
+            else if (lines[i].Contains("microsoft"))
+                classes[i] = 10;
+            else if (lines[i].Contains("other"))
+                classes[i] = 11;
+            else if (lines[i].Contains("paypal"))
+                classes[i] = 12;
+            else if (lines[i].Contains("wellsfargo"))
+                classes[i] = 13;
+            else if (lines[i].Contains("yahoo"))
+                classes[i] = 14;
+            else
+                classes[i] = -1;
+        }
+        return classes;
+    }
+
+
+
 
     public static StringBuilder extractGlobalFeatures(String algorithm,List<String> images)
     {

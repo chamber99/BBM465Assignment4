@@ -55,7 +55,7 @@ namespace assignment4
 
         public double[] useFCTH(Bitmap imageData) {
             FCTH_Descriptor.FCTH getFCTH = new FCTH_Descriptor.FCTH();
-            double[] table = getFCTH.Apply(imageData,2);
+            double[] table = getFCTH.Apply(imageData,1);
             return table;
         }
 
