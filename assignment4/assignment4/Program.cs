@@ -557,7 +557,7 @@ public class Assignment4
         double[,] doubles = target.ToMatrix();
         doubles = Matrix.Remove<double>(doubles, null, indexes.ToArray());
 
-        target = doubles.ToArray();
+        target = doubles.ToJagged();
 
         Console.WriteLine(target.Length + " " + target[1].Length);
         return target;
