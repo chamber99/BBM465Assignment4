@@ -27,10 +27,10 @@ public class Assignment4
 {
     public static void Main(String[] args)
     {
-        //run(args);
+        run(args);
         //readCSVFile("../../../precomputed/precomputed_SURF_train.csv", "../../../precomputed/precomputed_SURF_val.csv");
 
-        MLOperations ops = new MLOperations();
+        /*MLOperations ops = new MLOperations();
         Console.WriteLine("CEDD");
 
         int[] class_cedd = prepareClassNames("CEDD","train");
@@ -80,7 +80,7 @@ public class Assignment4
 
 
 
-        ops.useRandomForest(FCTH_train, class_FCTH, FCTH_val,pred_FCTH);
+        ops.useRandomForest(FCTH_train, class_FCTH, FCTH_val,pred_FCTH);*/
 
 
 
@@ -290,6 +290,10 @@ public class Assignment4
         // Creating new csv files or overriding the content of existed ones using StreamWriter.  
         StreamWriter csvCreator = new StreamWriter(path);
         csvCreator.Write(content);
+        File.SetAttributes(path, FileAttributes.Normal);
+        FileInfo fileinfo = new FileInfo(path);
+        fileinfo.IsReadOnly = false;
+
         csvCreator.Close();
     }
 
