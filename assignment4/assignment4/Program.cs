@@ -38,6 +38,24 @@ public class Assignment4
 
         double[][] cedd_train = prepareMLInputs("CEDD", "train");
         double[][] cedd_val = prepareMLInputs("CEDD", "val");
+
+
+
+
+
+        List<int> indexes = checkConstants(cedd_train);
+        Console.Write("indexes: ");
+        foreach (int i in indexes) {
+            Console.Write(i + " ");
+        
+        }
+        Console.WriteLine();
+
+
+        cedd_train = removeColumn(cedd_train, indexes);
+        cedd_val = removeColumn(cedd_val, indexes);
+        
+
         ops.useRandomForest(cedd_train, class_cedd, cedd_val,pred_cedd);
 
         Console.WriteLine("FCTH");
@@ -46,6 +64,22 @@ public class Assignment4
         int[] pred_FCTH = prepareClassNames("FCTH", "val");
         double[][] FCTH_train = prepareMLInputs("FCTH", "train");
         double[][] FCTH_val = prepareMLInputs("FCTH", "val");
+
+        List<int> indexes_fcth = checkConstants(FCTH_train);
+        Console.Write("indexes: ");
+        foreach (int i in indexes_fcth)
+        {
+            Console.Write(i + " ");
+
+        }
+        Console.WriteLine();
+
+
+        FCTH_train = removeColumn(FCTH_train, indexes_fcth);
+        FCTH_val = removeColumn(FCTH_val, indexes_fcth);
+
+
+
         ops.useRandomForest(FCTH_train, class_FCTH, FCTH_val,pred_FCTH);
 
 
@@ -141,7 +175,7 @@ public class Assignment4
             }
 
             // Generating precomputed csv files to store features.
-            //generatePrecompute("CEDD", images_training, images_validation);
+            generatePrecompute("CEDD", images_training, images_validation);
             generatePrecompute("FCTH", images_training, images_validation);
             //generatePrecompute("SURF", images_training, images_validation);
 
@@ -493,6 +527,39 @@ public class Assignment4
         return classes;
     }
 
+    public static List<int> checkConstants(double[][] target) {
+
+        List<int> indexes = new List<int>();
+        double[] variences = Measures.Variance(target);
+
+        int index = 0;
+        foreach (double d in variences) {
+            if (d == 0) {
+                indexes.Add(index);
+            }
+            index++;
+        }
+
+       
+        return indexes;
+
+
+    }
+
+    
+    
+    public static double[][] removeColumn (double[][] target, List<int> indexes) {
+
+        double[,] doubles = target.ToMatrix();
+        doubles = Matrix.Remove<double>(doubles, null, indexes.ToArray());
+
+        target = doubles.ToArray();
+
+        Console.WriteLine(target.Length + " " + target[1].Length);
+        return target;
+
+
+    }
 
 
 
