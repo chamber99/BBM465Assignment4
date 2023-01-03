@@ -13,6 +13,7 @@ namespace assignment4
 
         public Constants()
         {
+            // All brands are assigned to a constant integer in order to be able to be used in models.
             classes= new Dictionary<string, int>();
             classes.Add("adobe", 0);
             classes.Add("alibaba", 1);
@@ -31,16 +32,11 @@ namespace assignment4
             classes.Add("yahoo", 14);
         }
 
+        // Getter for outside usage.
         public Dictionary<string,int> getClasses()
         {
             return this.classes;
         }
-
-
-
-
-
-
 
     }
 }
