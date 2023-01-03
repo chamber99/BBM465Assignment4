@@ -3,27 +3,50 @@
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net45</TargetFramework>
 		<PlatformTarget>AnyCPU</PlatformTarget>
+		<AssemblyName>pi</AssemblyName>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Accord.MachineLearning" Version="3.8.0" />
-		<PackageReference Include="Accord.Vision" Version="3.8.0" />
-		<PackageReference Include="EmguCV" Version="3.1.0.1" />
 		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net45" Version="1.0.3">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
 	<ItemGroup>
+	  <Reference Include="Accord">
+	    <HintPath>bin\Debug\net45\lib\Accord.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Accord.Imaging">
+	    <HintPath>bin\Debug\net45\lib\Accord.Imaging.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Accord.IO">
+	    <HintPath>bin\Debug\net45\lib\Accord.IO.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Accord.MachineLearning">
+	    <HintPath>bin\Debug\net45\lib\Accord.MachineLearning.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Accord.Math">
+	    <HintPath>bin\Debug\net45\lib\Accord.Math.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Accord.Math.Core">
+	    <HintPath>bin\Debug\net45\lib\Accord.Math.Core.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Accord.Statistics">
+	    <HintPath>bin\Debug\net45\lib\Accord.Statistics.dll</HintPath>
+	  </Reference>
+	  <Reference Include="Accord.Vision">
+	    <HintPath>bin\Debug\net45\lib\Accord.Vision.dll</HintPath>
+	  </Reference>
 	  <Reference Include="BTDH">
-	    <HintPath>..\BTDH.dll</HintPath>
+	    <HintPath>bin\Debug\net45\lib\BTDH.dll</HintPath>
 	  </Reference>
 	  <Reference Include="CEDD">
-	    <HintPath>..\CEDD.dll</HintPath>
+	    <HintPath>bin\Debug\net45\lib\CEDD.dll</HintPath>
 	  </Reference>
 	  <Reference Include="FCTH">
-	    <HintPath>..\FCTH.dll</HintPath>
+	    <HintPath>bin\Debug\net45\lib\FCTH.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
+	
 	<ItemGroup>
 	  <Compile Update="Properties\Settings.Designer.cs">
 	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
